@@ -1,0 +1,5 @@
+---
+lookup_options:
+  "^zettarepl::.*":
+    merge:
+      strategy: deep

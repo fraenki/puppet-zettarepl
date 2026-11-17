@@ -1,0 +1,14 @@
+---
+zettarepl::config_mode: '0600'
+zettarepl::config_owner: 'root'
+zettarepl::package_ensure: 'installed'
+zettarepl::package_manage: true
+zettarepl::periodic_snapshot_tasks: {}
+zettarepl::purge: false
+zettarepl::replication_tasks: {}
+zettarepl::service_enable: true
+zettarepl::service_ensure: 'running'
+zettarepl::service_manage: true
+zettarepl::service_name: 'zettarepl'
+zettarepl::settings: {}
+zettarepl::transports: {}

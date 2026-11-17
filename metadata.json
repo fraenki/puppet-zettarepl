@@ -1,0 +1,41 @@
+{
+  "name": "fraenki-zettarepl",
+  "version": "1.0.0",
+  "author": "Frank Wall",
+  "summary": "Install and configure zettarepl, a ZFS snapshot and replication solution",
+  "license": "BSD-2-Clause",
+  "source": "https://github.com/fraenki/puppet-zettarepl",
+  "project_page": "https://github.com/fraenki/puppet-zettarepl",
+  "issues_url": "https://github.com/fraenki/puppet-zettarepl/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 9.0.0 < 10.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "14",
+        "15"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 8.0 < 10.0.0"
+    }
+  ],
+  "tags": [
+    "freebsd",
+    "replication",
+    "snapshot",
+    "zettarepl",
+    "zfs"
+  ],
+  "pdk-version": "3.4.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates.git",
+  "template-ref": "heads/main-0-g8ca954f"
+}
