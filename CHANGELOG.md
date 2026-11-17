@@ -12,6 +12,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 1.0.0 - 2026-11-17
 Initial release.
 
-[Unreleased]: https://github.com/fraenki/puppet-zettarepl/compare/1.0.0...HEAD
-[1.0.1]: https://github.com/fraenki/puppet-zettarepl/compare/1.0.0...1.0.1
+[Unreleased]: https://github.com/fraenki/puppet-zettarepl/compare/v1.0.0...HEAD
+[1.0.1]: https://github.com/fraenki/puppet-zettarepl/compare/v1.0.0...v1.0.1
 [#1]: https://github.com/fraenki/puppet-zettarepl/pull/1
