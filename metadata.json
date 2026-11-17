@@ -1,6 +1,6 @@
 {
   "name": "fraenki-zettarepl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Frank Wall",
   "summary": "Install and configure zettarepl, a ZFS snapshot and replication solution",
   "license": "BSD-2-Clause",
