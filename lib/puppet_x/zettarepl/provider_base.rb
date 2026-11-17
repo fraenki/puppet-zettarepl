@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'puppet_x/zettarepl'
-require 'puppet_x/zettarepl/config_file'
+require_relative '../zettarepl'
+require_relative 'config_file'
 
 # Shared provider logic for named entries in one section of the zettarepl
 # definition file. A provider includes this module and defines

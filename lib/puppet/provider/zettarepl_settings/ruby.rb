@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'puppet_x/zettarepl/config_file'
+require_relative '../../../puppet_x/zettarepl/config_file'
 
 Puppet::Type.type(:zettarepl_settings).provide(:ruby) do
   desc 'Manages the global settings in the zettarepl definition file.'

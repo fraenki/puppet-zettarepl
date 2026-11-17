@@ -2,7 +2,7 @@
 
 require 'yaml'
 require 'puppet/util'
-require 'puppet_x/zettarepl'
+require_relative '../zettarepl'
 
 # Reads and writes the zettarepl definition file.
 module PuppetX::Zettarepl::ConfigFile
