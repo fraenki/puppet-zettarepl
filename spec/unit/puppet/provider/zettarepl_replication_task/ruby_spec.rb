@@ -24,7 +24,7 @@ describe Puppet::Type.type(:zettarepl_replication_task).provider(:ruby) do
 
   it 'writes a new entry to its section' do
     resource = type_class.new(name: 'other', config: entry)
-    expect(config_file).to receive(:write).with('replication-tasks' => { 'example' => entry, 'other' => entry })
+    expect(config_file).to receive(:write).with({ 'replication-tasks' => { 'example' => entry, 'other' => entry } })
     resource.provider.create
   end
 end

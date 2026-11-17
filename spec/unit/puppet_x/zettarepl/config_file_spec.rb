@@ -55,8 +55,8 @@ describe PuppetX::Zettarepl::ConfigFile do
 
   describe '.write' do
     it 'writes hash keys sorted recursively' do
-      described_class.write('transports' => { 'b' => {}, 'a' => { 'z' => 1, 'y' => [2, 1] } }, 'timezone' => 'UTC')
-      expect(File.read(path)).to eq("---\ntimezone: UTC\ntransports:\n  a:\n    y:\n    - 2\n    - 1\n    z: 1\n  b: {}\n")
+      described_class.write({ 'transports' => { 'second' => {}, 'first' => { 'zeta' => 1, 'list' => [2, 1] } }, 'timezone' => 'UTC' })
+      expect(File.read(path)).to eq("---\ntimezone: UTC\ntransports:\n  first:\n    list:\n    - 2\n    - 1\n    zeta: 1\n  second: {}\n")
     end
 
     it 'creates a new file with mode 0600' do

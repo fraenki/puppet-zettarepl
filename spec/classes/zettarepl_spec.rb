@@ -52,7 +52,7 @@ describe 'zettarepl' do
         it { is_expected.to compile.with_all_deps }
 
         purged_types.each do |type|
-          it { is_expected.to contain_resources(type).with(purge: true, notify: 'Class[zettarepl::service]') }
+          it { is_expected.to contain_resources(type).with_purge(true).that_notifies('Class[zettarepl::service]') }
         end
       end
 

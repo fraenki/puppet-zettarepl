@@ -51,8 +51,10 @@ describe Puppet::Type.type(:zettarepl_periodic_snapshot_task).provider(:ruby) do
     it 'adds the task and keeps all other content' do
       resource = type_class.new(name: 'daily', config: { 'dataset' => 'tank/other' })
       expect(config_file).to receive(:write).with(
-        'periodic-snapshot-tasks' => { 'hourly' => hourly, 'daily' => { 'dataset' => 'tank/other' } },
-        'timezone' => 'UTC',
+        {
+          'periodic-snapshot-tasks' => { 'hourly' => hourly, 'daily' => { 'dataset' => 'tank/other' } },
+          'timezone' => 'UTC',
+        },
       )
       resource.provider.create
     end
@@ -67,8 +69,10 @@ describe Puppet::Type.type(:zettarepl_periodic_snapshot_task).provider(:ruby) do
     it 'replaces the whole task' do
       resource = type_class.new(name: 'hourly', config: { 'dataset' => 'tank/new' })
       expect(config_file).to receive(:write).with(
-        'periodic-snapshot-tasks' => { 'hourly' => { 'dataset' => 'tank/new' } },
-        'timezone' => 'UTC',
+        {
+          'periodic-snapshot-tasks' => { 'hourly' => { 'dataset' => 'tank/new' } },
+          'timezone' => 'UTC',
+        },
       )
       resource.provider.config = { 'dataset' => 'tank/new' }
     end
@@ -77,14 +81,14 @@ describe Puppet::Type.type(:zettarepl_periodic_snapshot_task).provider(:ruby) do
   describe '#destroy' do
     it 'removes the task and the empty section' do
       resource = type_class.new(name: 'hourly', ensure: 'absent')
-      expect(config_file).to receive(:write).with('timezone' => 'UTC')
+      expect(config_file).to receive(:write).with({ 'timezone' => 'UTC' })
       resource.provider.destroy
     end
 
     it 'removes a task with a numeric name' do
       allow(config_file).to receive(:read).and_return('periodic-snapshot-tasks' => { 1 => hourly, 'hourly' => hourly })
       resource = type_class.new(name: '1', ensure: 'absent')
-      expect(config_file).to receive(:write).with('periodic-snapshot-tasks' => { 'hourly' => hourly })
+      expect(config_file).to receive(:write).with({ 'periodic-snapshot-tasks' => { 'hourly' => hourly } })
       resource.provider.destroy
     end
   end

@@ -36,6 +36,6 @@
     "zfs"
   ],
   "pdk-version": "3.4.0",
-  "template-url": "https://github.com/puppetlabs/pdk-templates.git",
-  "template-ref": "heads/main-0-g8ca954f"
+  "template-url": "https://github.com/puppetlabs/pdk-templates.git#3.6.1",
+  "template-ref": "tags/3.6.1-0-gb9426e5"
 }

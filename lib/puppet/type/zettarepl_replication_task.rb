@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength
 Puppet::Type.newtype(:zettarepl_replication_task) do
   desc <<-DOC
     @summary Manages a replication task in the zettarepl definition file.
@@ -53,4 +52,3 @@ Puppet::Type.newtype(:zettarepl_replication_task) do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

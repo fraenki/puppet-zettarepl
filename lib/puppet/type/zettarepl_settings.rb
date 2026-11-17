@@ -2,7 +2,6 @@
 
 require 'puppet_x/zettarepl/config_file'
 
-# rubocop:disable Metrics/BlockLength
 Puppet::Type.newtype(:zettarepl_settings) do
   desc <<-DOC
     @summary Manages the global settings in the zettarepl definition file.
@@ -45,4 +44,3 @@ Puppet::Type.newtype(:zettarepl_settings) do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

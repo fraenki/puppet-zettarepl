@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/BlockLength
 Puppet::Type.newtype(:zettarepl_transport) do
   desc <<-DOC
     @summary Manages a named transport in the zettarepl definition file.
@@ -56,4 +55,3 @@ Puppet::Type.newtype(:zettarepl_transport) do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
